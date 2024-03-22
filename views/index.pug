@@ -1,0 +1,39 @@
+html 
+    head 
+        script(src="math.js")
+        title chess
+        link(rel="stylesheet", href="style.css")
+    body 
+
+        h1 Relationship Between Games Played and Rating
+        div(class="scaleType")
+            input(type="radio", id="exponential", name="scaleType", value="exponential", onchange="changeScale()", checked)
+            label(for="exponential") Exponential 
+        div(class="scaleType")
+            input(type="radio", id="logarithmic", name="scaleType", value="logarithmic", onchange="changeScale()")
+            label(for="logarithmic") Logarithmic
+        p(id="sliderLabel") Change for biased data
+        input(type="range", min="1" , max="5", step="0.5", value="2", id="expoSlider", oninput="this.nextElementSibling.value = this.value")
+        output(id="sliderNum") 2
+        br
+        button(id="expoButton", onclick="recalculateExpo()") Recalculate 
+        br
+        p(id="sample_size") Loading...
+        br
+        h3 Rapid Games
+        small(id="rapidCoefficient") Calculating Coefficient...
+        br
+        canvas(id="rapid_canvas", width = 800, height = 600)
+        h3 Bullet Games
+        small(id="bulletCoefficient") Calculating Coefficient...
+        br
+        canvas(id="bullet_canvas", width = 800, height = 600)
+        h3 Blitz Games
+        small(id="blitzCoefficient") Calculating Coefficient...
+        br
+        canvas(id="blitz_canvas", width = 800, height = 600)
+        script.
+            var playerData = !{players}
+        script(src="graph.js")
+
+        

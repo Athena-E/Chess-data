@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+button {
+    font-family: "Roboto", sans-serif;
+    border: none;
+    padding: 5px;
+    margin: 20px;
+    cursor: pointer;
+    background-color: rgb(191, 195, 202);
+    border-radius: 8px;
+}
+
+canvas {
+    margin: 5px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#expoSlider {
+    margin-right: 8px;
+}
+
+.scaleType {
+    display: inline;
+    margin: 0px 25px;
+}
+
+.expoOptions {
+    display: none;
+}

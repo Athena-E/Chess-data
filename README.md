@@ -1,1 +1,1 @@
-# Chess.com Player Stattistics Analysis
+# Chess.com Player Statistics Analysis
